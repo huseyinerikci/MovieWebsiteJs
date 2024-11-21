@@ -1,0 +1,138 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #0f171e;
+  --secondary-color: #1a242e;
+}
+body {
+  background-color: var(--primary-color);
+  font-family: "Space Grotesk", sans-serif;
+}
+/* ! Header */
+header {
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+header h1 {
+  color: #fff;
+  letter-spacing: 5px;
+}
+.search {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: #fff;
+  margin-left: 0.5rem;
+  width: 100%;
+  transition: transform 0.3s ease-in;
+}
+.search:focus {
+  outline: none;
+  transform: scale(1.025);
+}
+.search::placeholder {
+  color: #6c757d;
+}
+/* ! Main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.movie {
+  width: 300px;
+  background-color: var(--secondary-color);
+  margin: 1rem;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.movie img {
+  width: 100%;
+}
+.movie-info {
+  color: #79b8f3;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5px;
+}
+.movie-info span {
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 90%;
+  font-weight: bold;
+}
+.movie-info span.green {
+  color: green;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.yellow {
+  color: lightyellow;
+}
+.overview {
+  background-color: #566b84;
+  color: #111;
+  padding: 2rem;
+  max-height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.5s ease-in;
+}
+.movie:hover .overview {
+  transform: translateY(0);
+}
+.overview h3 {
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #79b8f3;
+  width: 50%;
+}
+/* ! Footer */
+footer {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+footer h3 {
+  color: #fff;
+  letter-spacing: 5px;
+  margin-bottom: 0.5rem;
+}
+footer ul li {
+  list-style: none;
+  display: inline;
+  margin-right: 1rem;
+}
+footer ul li a {
+  color: #2066a0;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+footer small {
+  color: #8197a4;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
